@@ -30,7 +30,7 @@ a later time inside the program, or via your own software.
 **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/r0vr/stt.git
+git clone https://github.com/r0vr/Simple-Ticker-Tracker.git
 cd stt
 ```
 
