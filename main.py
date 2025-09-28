@@ -1,6 +1,5 @@
 # Simple Ticker Tracker
 # Owen Pearson
-# 1aWeek Project - Week 2
 
 import yfinance as yf
 import pandas as pd
@@ -12,8 +11,8 @@ from datetime import date
 from datetime import datetime
 
 # Error codes
-ERROR_INVALID_TICKER = "Invalid ticker"
-ERROR_INVALID_CHOICE = "Invalid choice"
+ERROR_INVALID_TICKER = "Invalid ticker"  # No data for ticker
+ERROR_INVALID_CHOICE = "Invalid choice"  # User input error
 
 
 # Get ticker
@@ -109,6 +108,7 @@ def get_stock_data(tick):
                 dfc = df.history(period="ytd")
             else:
                 print("Invalid range")
+            # NOTE: dfc is possibly unbound but no issues noticed
             dfc.to_csv(f"{tick}_history_{history_range}.csv")
             shutil.move(f"{tick}_history_{history_range}.csv", f"data/{tick}")
             print(f"{tick} history data CSV created")
