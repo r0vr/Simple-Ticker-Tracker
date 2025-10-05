@@ -108,7 +108,7 @@ def get_stock_data(tick):
                 dfc = df.history(period="ytd")
             else:
                 print("Invalid range")
-            # NOTE: dfc is possibly unbound but no issues noticed
+                continue
             dfc.to_csv(f"{tick}_history_{history_range}.csv")
             shutil.move(f"{tick}_history_{history_range}.csv", f"data/{tick}")
             print(f"{tick} history data CSV created")
@@ -189,15 +189,16 @@ def view_stock_data():
         return e
 
 
+# Main function
 def main():
     try:
         print("+=========================+")
         print("Simple Ticker Tracker")
         print("+=========================+")
         choice = choose()
-        if choice == "1":
+        if choice == "1":  # View saved data
             view_stock_data()
-        elif choice == "2":
+        elif choice == "2":  # Get new data (after a check that ticker is valid)
             tick = get_stock()
             valid_checker(tick)
             if valid_checker(tick) == ERROR_INVALID_TICKER:
