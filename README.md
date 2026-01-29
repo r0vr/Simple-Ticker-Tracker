@@ -27,16 +27,14 @@ a later time inside the program, or via your own software.
 - [git](https://git-scm.com/) (to clone the repository)
 - [pip](https://pip.pypa.io/en/stable/) (for installing Python packages)
 
-**1. Clone the Repository**
+**1. 
 
 ```bash
 git clone https://github.com/r0vr/Simple-Ticker-Tracker.git
 cd stt
 ```
 
-**2. (Optional) Create and Activate a Virtual Environment**
-
-It’s recommended to use a virtual environment to keep dependencies isolated:
+**2.
 
 ```bash
 python -m venv venv
@@ -46,15 +44,14 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
-**3. Install Dependencies**
+**3. 
 
-Install all required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**4. Run the Program**
+**4. 
 
 ```bash
 python main.py
